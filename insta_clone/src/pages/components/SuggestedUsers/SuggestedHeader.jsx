@@ -5,9 +5,9 @@ export const SuggestedHeader = () => {
   return (
     <Flex justifyContent={"space-between"} alignItems={"center"} w={"full"}>
       <Flex alignItems={"center"} gap={2}>
-        <Avatar name="asaprogrammer" size={"lg"} src="/profilepic.png" />
+        <Avatar name="boi_thompson" size={"lg"} src="/profilepic.png" />
         <Text fontSize={12} fontWeight={"bold"}>
-          asaprogrammer_
+          boi_thompson
         </Text>
       </Flex>
       <Link
