@@ -19,12 +19,24 @@ export const SuggestedUsers = () => {
           See All
         </Text>
       </Flex>
-      <SuggestedUser />
-      <SuggestedUser />
-      <SuggestedUser />
+      <SuggestedUser
+        name="Dan Abranov"
+        followers={1392}
+        avatar='https://bit.ly/dan-abramov'
+      />
+      <SuggestedUser
+        name="Ryan Florence"
+        followers={567}
+        avatar="https://bit.ly/ryan-florence"
+      />
+      <SuggestedUser
+        name="Christian Nwanba"
+        followers={759}
+        avatar="https://bit.ly/code-beast"
+      />
 
       <Box alignSelf={"start"} fontSize={12} color={"gray.500"} mt={5}>
-        @ 2023 Built By{" "}
+        © 2023 Built By{" "}
         <Link
           href="https://www.youtube.com/@justthompson9987"
           target="_blank"
