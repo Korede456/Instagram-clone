@@ -62,6 +62,7 @@ export const PostFooter = ({username, isProfilePage}) => {
       >
         <InputGroup>
           <Input
+          id={username}
             variant={"flushed"}
             placeholder={"Add a comment..."}
             fontSize={14}

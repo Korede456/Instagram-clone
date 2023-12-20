@@ -5,7 +5,7 @@ import { PostFooter } from "./PostFooter";
 export const FeedPost = ({img, username, avatar}) => {
   return (
     <>
-      <PostHeader username={username} avatar={avatar}/>
+      <PostHeader username={username} avatar={avatar} />
       <Box my={2} borderRadius={4} overflow={"hidden"}>
         <Image src={img} alt={username} />
       </Box>

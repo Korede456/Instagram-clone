@@ -151,6 +151,42 @@ export const ProfilePost = ({ img }) => {
                     profilePic="https://bit.ly/kent-c-dodds"
                     text={"Good clone dude"}
                   />
+                  <Comment
+                    createdAt="1d ago"
+                    username="boi_thompson"
+                    profilePic="/profilepic.png"
+                    text={"Dummy images from unsplash"}
+                  />
+                  <Comment
+                    createdAt="12h ago"
+                    username="abrahmov"
+                    profilePic="https://bit.ly/dan-abramov"
+                    text={"Nice pic"}
+                  />
+                  <Comment
+                    createdAt="4h ago"
+                    username="kentdodds"
+                    profilePic="https://bit.ly/kent-c-dodds"
+                    text={"Good clone dude"}
+                  />
+                  <Comment
+                    createdAt="1d ago"
+                    username="boi_thompson"
+                    profilePic="/profilepic.png"
+                    text={"Dummy images from unsplash"}
+                  />
+                  <Comment
+                    createdAt="12h ago"
+                    username="abrahmov"
+                    profilePic="https://bit.ly/dan-abramov"
+                    text={"Nice pic"}
+                  />
+                  <Comment
+                    createdAt="4h ago"
+                    username="kentdodds"
+                    profilePic="https://bit.ly/kent-c-dodds"
+                    text={"Good clone dude"}
+                  />
                 </VStack>
                 <Divider my={4} bg={"gray.800"} />
                 <PostFooter isProfilePage={true} />
