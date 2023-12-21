@@ -1,31 +1,10 @@
-import {
-  Box,
-  VStack,
-  Image,
-  Input,
-  Button,
-  Flex,
-  Text,
-} from "@chakra-ui/react";
+import { Box, VStack, Image, Flex, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Login } from "./Login";
+import { Signup } from "./Signup";
 
 export const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [inputs, setInputs] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
-  const navigate = useNavigate();
-
-  const handleAuth = () => {
-    if (!inputs.email || !inputs.password) {
-      alert("Please fill the fields.");
-      return;
-    }
-    navigate("/");
-  };
 
   return (
     <>
@@ -37,41 +16,8 @@ export const AuthForm = () => {
             cursor={"pointer"}
             alt="instagram logo"
           />
-          <Input
-            placeholder="Email"
-            fontSize={14}
-            type="email"
-            value={inputs.email}
-            onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
-          />
 
-          <Input
-            placeholder="Password"
-            fontSize={14}
-            type="password"
-            value={inputs.password}
-            onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
-          />
-          {!isLogin ? (
-            <Input
-              placeholder=" Confirm Password"
-              fontSize={14}
-              type="password"
-              value={inputs.confirmPassword}
-              onChange={(e) =>
-                setInputs({ ...inputs, confirmPassword: e.target.value })
-              }
-            />
-          ) : null}
-          <Button
-            w={"full"}
-            colorScheme="blue"
-            size={"sm"}
-            fontSize={14}
-            onClick={handleAuth}
-          >
-            {isLogin ? "Log in" : "Sign up"}
-          </Button>
+          {isLogin ? <Login /> : <Signup />}
 
           {/* --------------- OR ------------- */}
           <Flex
