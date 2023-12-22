@@ -11,6 +11,7 @@ export const Login = () => {
       <Input
         placeholder="Email"
         fontSize={14}
+        size={"sm"}
         type="email"
         value={inputs.email}
         onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
@@ -19,6 +20,7 @@ export const Login = () => {
       <Input
         placeholder="Password"
         fontSize={14}
+        size={"sm"}
         type="password"
         value={inputs.password}
         onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
