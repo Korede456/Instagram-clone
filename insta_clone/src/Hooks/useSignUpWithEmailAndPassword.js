@@ -2,11 +2,11 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth, firestore } from "../Firebase/Firebase";
 import {
   collection,
-  where,
   doc,
   getDocs,
   query,
   setDoc,
+  where,
 } from "firebase/firestore";
 import { useShowToast } from "./useShowToast";
 import { useAuthStore } from "../Store/AuthStore";
@@ -22,15 +22,17 @@ export const useSignUpWithEmailAndPassword = () => {
       !inputs.email ||
       !inputs.password ||
       !inputs.username ||
-      !inputs.fullname
+      !inputs.fullName
     ) {
       showToast("Error", "Please fill all the fields", "error");
       return;
     }
 
     const usersRef = collection(firestore, "users");
+
     const q = query(usersRef, where("username", "==", inputs.username));
     const querySnapshot = await getDocs(q);
+
     if (!querySnapshot.empty) {
       showToast("Error", "Username already exists", "error");
       return;
@@ -50,7 +52,7 @@ export const useSignUpWithEmailAndPassword = () => {
           uid: newUser.user.uid,
           email: inputs.email,
           username: inputs.username,
-          fullname: inputs.fullname,
+          fullName: inputs.fullName,
           bio: "",
           profilePicURL: "",
           followers: [],
@@ -58,7 +60,7 @@ export const useSignUpWithEmailAndPassword = () => {
           posts: [],
           createdAt: Date.now(),
         };
-        await setDoc(doc(firestore, " users", newUser.user.uid), userDoc);
+        await setDoc(doc(firestore, "users", newUser.user.uid), userDoc);
         localStorage.setItem("user-info", JSON.stringify(userDoc));
         loginUser(userDoc);
       }
