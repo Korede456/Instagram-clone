@@ -37,7 +37,7 @@ export const AuthForm = () => {
 
           {/* log in with google */}
 
-          <GoogleAuth />
+          <GoogleAuth prefix={isLogin ? "Log in" : "Sign up"} />
         </VStack>
       </Box>
 
